@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Catalog } from "@/widgets/catalog";
 
@@ -20,12 +19,3 @@ export default function Home() {
     </>
   );
 }
-
-// <Image
-//   src="/vercel.svg"
-//   alt="Vercel Logo"
-//   className={styles.vercelLogo}
-//   width={100}
-//   height={24}
-//   priority
-// />

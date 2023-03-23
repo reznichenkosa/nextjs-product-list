@@ -1,0 +1,45 @@
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.small {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.normal {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.big {
+  padding: 6px 12px;
+  font-size: 18px;
+}
+
+.danger {
+  background-color: lightcoral;
+  color: white;
+}
+
+.success {
+  background-color: mediumseagreen;
+  color: white;
+}
+
+.ghost {
+  color: dodgerblue;
+}
+
+.fullWidth {
+  display: block;
+  width: 100%;
+}

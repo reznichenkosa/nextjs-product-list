@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description {
+  flex: 1 1 auto;
+  font-size: 14px;
+}
+
+.priceInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addToCartBtn {
+  display: flex;
+  justify-content: flex-end;
+}
