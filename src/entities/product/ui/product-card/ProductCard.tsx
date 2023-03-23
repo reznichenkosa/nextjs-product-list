@@ -1,3 +1,4 @@
+import { Bage } from "@/shared/ui/bage";
 import { Card } from "@/shared/ui/card";
 import Image from "next/image";
 import { FC, ReactNode } from "react";
@@ -6,11 +7,12 @@ import styles from "./ProductCard.module.css";
 
 interface ProductCardProps {
   product: Product;
-  addToCart?: ReactNode;
+  addToCartBtn?: ReactNode;
 }
 
-export const ProductCard: FC<ProductCardProps> = ({ product, addToCart }) => {
-  const { id, thumbnail, title, price, description, discountPercentage } = product;
+export const ProductCard: FC<ProductCardProps> = ({ product, addToCartBtn }) => {
+  const { thumbnail, title, price, description, discountPercentage } = product;
+  const intPrice = price.toLocaleString("en-EN", { style: "currency", currency: "USD" });
   return (
     <Card>
       <div className={styles.wrapper}>
@@ -25,10 +27,10 @@ export const ProductCard: FC<ProductCardProps> = ({ product, addToCart }) => {
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         <div className={styles.priceInfo}>
-          <span className={styles.price}>{price}</span>
-          <span className={styles.discount}>{discountPercentage}</span>
+          <span className={styles.price}>{intPrice}</span>
+          <Bage title={`Sale ${String(discountPercentage)}%`} />
         </div>
-        <div className={styles.addToCartBtn}>{addToCart}</div>
+        <div className={styles.addToCartBtn}>{addToCartBtn}</div>
       </div>
     </Card>
   );

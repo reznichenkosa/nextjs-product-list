@@ -7,7 +7,7 @@ interface AddProductToCartProps {
 
 export const AddProductToCart: FC<AddProductToCartProps> = ({ addToCartHandler }) => {
   return (
-    <Button onClick={addToCartHandler} variant="success">
+    <Button onClick={addToCartHandler} size="big" variant="success">
       Add to cart
     </Button>
   );
